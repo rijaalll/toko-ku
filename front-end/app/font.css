@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url('/font/Quicksand.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Granjon";
+    src: url('/font/Granjon.otf') format('opentype');
+}
+@font-face {
+    font-family: "OPTINaval";
+    src: url('/font/OPTINaval.otf') format('opentype');
+}
+
+.__font_main {
+    font-family: "Quicksand";
+}
+.__font_first {
+    font-family: "Granjon";
+}
+.__font_second {
+    font-family: "OPTINaval";
+}

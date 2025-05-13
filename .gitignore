@@ -1,0 +1,44 @@
+# Node modules and dependencies for the front-end
+front-end/node_modules/
+front-end/.pnp
+front-end.pnp.*
+front-end.yarn/*
+!.front-end.yarn/patches
+!.front-end.yarn/plugins
+!.front-end.yarn/releases
+!.front-end.yarn/versions
+
+# Coverage reports (testing)
+front-end/coverage
+
+# Next.js build output for the front-end
+front-end/.next/
+front-end/out/
+
+# Production build output (if exists in the front-end or back-end)
+/build
+
+# Miscellaneous system files
+.DS_Store
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files (can be committed if needed)
+.env*
+*.env*
+
+# Vercel deployment folder (if applicable)
+/.vercel/
+
+# TypeScript build info files for Next.js
+front-end/next-env.d.ts
+front-end/*.tsbuildinfo
+
+# PHP specific for the back-end
+/back-end/vendor/
+/back-end/.env
