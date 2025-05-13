@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/font/OPTINaval.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="preload" href="/font/Quicksand.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
-      <body className="bg-zinc-50 __font_main">
+      <body className="bg-zinc-50 __font_main overflow-x-hidden">
         {children}
       </body>
     </html>

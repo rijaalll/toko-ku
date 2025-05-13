@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-      <div className="w-full h-auto">
+      <div className="w-full h-auto min-h-[300dvh]">
         <HomePage />
       </div>
   );

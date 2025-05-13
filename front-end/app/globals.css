@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+div,
+p,
+button,
+span {
+    @apply transition-all
+}

@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <div>
+        <div className="w-full h-[100dvh]">
             <p>Hero</p>
         </div>
 );}

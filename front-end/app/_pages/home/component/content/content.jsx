@@ -1,6 +1,6 @@
 export default function Content() {
     return (
-        <div>
+        <div className="w-full h-[100dvh]">
             <p>Content</p>
         </div>
     );
