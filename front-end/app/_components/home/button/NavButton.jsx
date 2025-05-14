@@ -1,6 +1,5 @@
 "use client";
-
-export default function NavButton({title, url, height, setScrollY}) {
+export default function NavButton({title, url, height, setScrollY, fontSize}) {
     const scroll_To = (height) => {
         window.scrollTo({
             top: height,
@@ -10,6 +9,6 @@ export default function NavButton({title, url, height, setScrollY}) {
 
     return (
         <button onClick={() => scroll_To(height * url)}>
-            <p>{title}</p>
+            <p style={{fontSize: `${fontSize}px`}}>{title}</p>
         </button>
 );}

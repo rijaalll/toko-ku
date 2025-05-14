@@ -1,5 +1,6 @@
 import "./globals.css";
-import "./font.css"
+import "./font.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function RootLayout({ children }) {
   return (
