@@ -1,4 +1,4 @@
-import HomePage from "./_pages/home/HomePage";
+import HomePage from "@/app/_pages/home/HomePage";
 
 export const metadata = {
   title: 'E-Commerce',
@@ -6,8 +6,9 @@ export const metadata = {
 }
 
 export default function Home() {
+
   return (
-      <div className="w-full h-auto min-h-[300dvh]">
+      <div className="w-full h-auto">
         <HomePage />
       </div>
   );

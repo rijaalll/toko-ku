@@ -8,7 +8,7 @@ export default function MainComment({ text, top, right, star, fontSize, bottom }
     }
 
     return (
-        <div style={positionStyle} className="bg-white p-3 rounded-xl absolute shadow-lg shadow-black/30 z-[3]">
+        <div style={positionStyle} className="bg-white py-3 px-5 rounded-xl absolute shadow-lg shadow-black/30 z-[3]">
             <div className="flex flex-col items-center">
                 <p style={{ fontSize: `${fontSize}px` }}>{text}</p>
                 {star > 0 && (
