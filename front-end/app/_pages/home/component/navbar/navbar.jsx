@@ -25,7 +25,7 @@ export default function Navbar({ height, scrollY }) {
     }
 
     return (
-        <nav className={`${navMobileOpen ? 'max-md:bg-zinc-200 h-[100dvh]' : 'max-md:h-auto'} ${scrollY > 100 ? 'md:bg-zinc-200/30 md:backdrop-blur-xs md:border-b-[1px] md:border-black/30' : 'md:bg-transparent md:border-b-[1px] md:border-transparent'} md:h-auto md:py-4 fixed w-full flex flex-col items-center top-0 left-0 duration-300`}>
+        <nav className={`${navMobileOpen ? 'max-md:bg-zinc-200 h-[100dvh]' : 'max-md:h-auto'} ${scrollY > 100 ? 'md:bg-zinc-200/30 md:backdrop-blur-xs md:border-b-[1px] md:border-black/30' : 'md:bg-transparent md:border-b-[1px] md:border-transparent'} md:h-auto md:py-4 fixed w-full flex flex-col items-center top-0 left-0 duration-300 z-[10]`}>
             <div className={`${navMobileOpen || scrollY > 100 ? 'max-md:bg-zinc-200/30 max-md:backdrop-blur-xs' : 'max-md:bg-transparent'} ${navMobileOpen ? 'max-md:rounded-none border-b-[1px] max-mdborder-black/70' : 'max-md:order-b-[1px] max-md:border-transparent max-md:rounded-3xl'} max-md:mt-5 md:relative w-[90%] flex flex-row justify-between items-center px-1 py-[2px] duration-300`}>
                 <div className="md:hidden p-0">
                     <Hamburger toggled={navMobileOpen} toggle={() => closeNavMobile()} size={20} duration={0.5} />

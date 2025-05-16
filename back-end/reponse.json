@@ -1,0 +1,8 @@
+// GET /product/all
+[
+    {
+        "id": "productId",
+        "name": "productName",
+
+    }
+]
