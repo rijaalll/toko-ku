@@ -8,7 +8,7 @@ export default function NavButton({title, url, height, setScrollY, fontSize}) {
     }
 
     return (
-        <button onClick={() => scroll_To(height * url)}>
+        <button onClick={() => scroll_To((height-100) * url)}>
             <p style={{fontSize: `${fontSize}px`}}>{title}</p>
         </button>
 );}

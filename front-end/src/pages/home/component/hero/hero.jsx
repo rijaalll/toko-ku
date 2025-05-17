@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import MainComment from '@/app/_components/home/comment/mainComment';
-import ColorButton from '@/app/_components/home/button/ColorButton';
-import IconComment from '@/app/_components/home/comment/iconComment';
+import MainComment from '@/src/components/home/comment/mainComment';
+import ColorButton from '@/src/components/home/button/ColorButton';
+import IconComment from '@/src/components/home/comment/iconComment';
 
 import blueImage from '@/public/image/home/hero/image-blue.png';
 import redImage from '@/public/image/home/hero/image-red.png';
@@ -39,6 +39,13 @@ const iconComment = [
 
 export default function Hero() {
     const [ colorState, setColorState ] = useState('blue');
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setColorState(prevState => prevState === 'blue' ? 'red' : prevState === 'red' ? 'green' : 'blue');
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [])
 
     return (
         <section className='w-full h-[100dvh]'>

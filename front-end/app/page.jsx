@@ -1,4 +1,4 @@
-import HomePage from "@/app/_pages/home/HomePage";
+import HomePage from "@/src/pages/home/HomePage";
 
 export const metadata = {
   title: 'E-Commerce',

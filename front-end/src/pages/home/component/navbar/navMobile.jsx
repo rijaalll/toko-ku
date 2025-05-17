@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import NavButton from "@/app/_components/home/button/NavButton";
-import navData from "@/app/_data/home/navbarData.json";
+import NavButton from "@/src/components/home/button/NavButton";
+import navData from "@/src/data/home/navbarData.json";
 
 export default function NavMobile({height, setNavMobileOpen, navMobileClose}) {
     const [ textOpen, setTextOpen ] = useState(false);

@@ -1,4 +1,8 @@
 // ROUTE FOR /product/all
+export const metadata = {
+    title: 'Semua Product',
+    description:  'semua product panjul shop',
+}
 
 export default function Product() {
     return (

@@ -8,6 +8,9 @@ front-end.yarn/*
 !.front-end.yarn/releases
 !.front-end.yarn/versions
 
+# Node modules back-end
+back-end/node_modules
+
 # Coverage reports (testing)
 front-end/coverage
 
