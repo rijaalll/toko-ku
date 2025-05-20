@@ -17,9 +17,12 @@ CREATE TABLE `product` (
   `product_discount` int(10) NOT NULL DEFAULT 0,
   `product_stock` int(10) NOT NULL DEFAULT 1,
   `product_img` varchar(255) DEFAULT NULL,
+  `category` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `product` (`id`, `product_id`, `product_name`, `product_des`, `product_price`, `product_discount`, `product_stock`, `product_img`, `category`) VALUES
+(2,	'PS-LaJ',	'panjul t-shirt',	'baju panjul',	70000,	0,	1,	'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',	'pakaian');
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -33,5 +36,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `user` (`id`, `uid`, `username`, `name`, `admin`, `password`, `token`) VALUES
+(2,	'',	'user1',	'user1',	'0',	'user123',	'user123');
 
--- 2025-05-18 03:15:25 UTC
+-- 2025-05-20 11:34:01 UTC
