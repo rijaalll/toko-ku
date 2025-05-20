@@ -11,8 +11,22 @@ app.use(express.json());
 
 app.use("/api/v1", require("./routes/tes/test"));
 
-app.use("/api/v1/product/all", require("./routes/product/all/allProduct"));
-app.use("/api/v1/product/add", require("./routes/product/add/addProduct"));
+/* 
+======================
+    AUTH API ROUTES
+======================
+*/
+app.use("/api/v1/auth", require("./routes/auth/auth"));
+app.use("/api/v1/auth", require("./routes/auth/auth"));
+app.use("/api/v1/auth", require("./routes/auth/auth"));
+
+/* 
+======================
+  PRODUCT API ROUTES
+======================
+*/
+app.use("/api/v1/product", require("./routes/product/product"));
+app.use("/api/v1/product", require("./routes/product/product"));
 
 
 
