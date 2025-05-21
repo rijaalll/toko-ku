@@ -1,4 +1,4 @@
-# 🛒 Simple Product & Auth API
+# 🛒 Panjul Shop API
 REST API untuk manajemen user, produk, dan rating.
 
 ## 🌐 Base URL
