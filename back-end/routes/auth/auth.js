@@ -14,7 +14,7 @@ function RandomString(length) {
 
 const SALT_ROUNDS = 10;
 
-
+// POST /register
 router.post('/register', async (req, res) => {
     const { username, name, password } = req.body;
 
@@ -30,8 +30,8 @@ router.post('/register', async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-        const uid = 'UID-' + RandomString(6);
-        const token = RandomString(30);
+        const uid = 'user-' + RandomString(4);
+        const token = RandomString(10);
 
         db.query(
             "INSERT INTO user (uid, username, name, admin, password, token) VALUES (?, ?, ?, ?, ?, ?)",
@@ -45,7 +45,7 @@ router.post('/register', async (req, res) => {
     });
 });
 
-
+// POST /login
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
 
@@ -84,7 +84,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-
+// GET /token/[user token]
 router.get('/token/:token', (req, res) => {
     const { token } = req.params;
 
