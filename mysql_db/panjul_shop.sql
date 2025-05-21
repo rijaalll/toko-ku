@@ -21,8 +21,20 @@ CREATE TABLE `product` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `product` (`id`, `product_id`, `product_name`, `product_des`, `product_price`, `product_discount`, `product_stock`, `product_img`, `category`) VALUES
-(2,	'PS-LaJ',	'panjul t-shirt',	'baju panjul',	70000,	0,	1,	'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp',	'pakaian');
+
+DROP TABLE IF EXISTS `rating`;
+CREATE TABLE `rating` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `from_userId` varchar(50) NOT NULL,
+  `for_productId` varchar(50) NOT NULL,
+  `rating` int(10) NOT NULL DEFAULT 5,
+  `comment` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `rating` (`id`, `from_userId`, `for_productId`, `rating`, `comment`) VALUES
+(1,	'admin',	'PS-LaJ',	4,	'keren'),
+(2,	'admin',	'PS-LaJ',	5,	'bagus');
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -31,12 +43,10 @@ CREATE TABLE `user` (
   `username` varchar(20) NOT NULL,
   `name` varchar(255) NOT NULL,
   `admin` varchar(10) NOT NULL DEFAULT '0',
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `token` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `user` (`id`, `uid`, `username`, `name`, `admin`, `password`, `token`) VALUES
-(2,	'',	'user1',	'user1',	'0',	'user123',	'user123');
 
--- 2025-05-20 11:34:01 UTC
+-- 2025-05-21 03:06:56 UTC
