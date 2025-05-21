@@ -1,8 +1,11 @@
 # 🛒 Panjul Shop API
+
 REST API untuk manajemen user, produk, dan rating.
 
 ## 🌐 Base URL
+```
 http://127.0.0.1:[PORT]/api/v1
+```
 
 ---
 
@@ -11,30 +14,37 @@ http://127.0.0.1:[PORT]/api/v1
 ### ✅ POST `/auth/register`
 Register user baru.
 
-**Body:**
+**Request Body:**
 ```json
 {
   "username": "john123",
   "name": "John Doe",
   "password": "123456"
 }
+```
 
-Response:
+**Response:**
+```json
 {
   "message": "Registrasi berhasil",
   "uid": "user-Abc1",
   "token": "Token123Abc"
 }
+```
 
-✅ POST /auth/login
+### ✅ POST `/auth/login`
 Login user.
 
-Body:
+**Request Body:**
+```json
 {
   "username": "john123",
   "password": "123456"
 }
-Response:
+```
+
+**Response:**
+```json
 {
   "message": "Login berhasil",
   "uid": "user-Abc1",
@@ -42,11 +52,13 @@ Response:
   "admin": 0,
   "token": "NewGeneratedToken123"
 }
+```
 
-✅ GET /auth/token/:token
+### ✅ GET `/auth/token/:token`
 Validasi token user.
 
-Response:
+**Response:**
+```json
 {
   "message": "Token valid",
   "user": {
@@ -56,53 +68,68 @@ Response:
     "admin": 0
   }
 }
+```
 
-📦 Product
-✅ POST /product/add
+---
+
+## 📦 Product
+
+### ✅ POST `/product/add`
 Tambah produk baru.
 
-Form Data:
-product_name
-product_des
-product_price
-product_discount
-product_stock
-category
-product_img (file gambar)
-Response:
+**Form Data:**
+- `product_name`
+- `product_des`
+- `product_price`
+- `product_discount`
+- `product_stock`
+- `category`
+- `product_img` (file gambar)
+
+**Response:**
+```json
 {
   "message": "Produk berhasil ditambahkan",
   "product_id": "PS-Xy1"
 }
+```
 
-✅ PUT /product/update/:productId
+### ✅ PUT `/product/update/:productId`
 Update data produk.
 
-Form Data:
-(Sama seperti /product/add)
+**Form Data:**
+- (Sama seperti `/product/add`)
 
-Response:
+**Response:**
+```json
 {
   "message": "Produk berhasil diperbarui."
 }
+```
 
-✅ DELETE /product/:uid
+### ✅ DELETE `/product/:uid`
 Hapus produk berdasarkan ID (admin only).
 
-Body:
+**Request Body:**
+```json
 {
   "username": "admin",
   "password": "admin123"
 }
-Response:
+```
+
+**Response:**
+```json
 {
   "message": "Produk berhasil dihapus"
 }
+```
 
-✅ GET /product/all
+### ✅ GET `/product/all`
 Ambil semua produk.
 
-Response:
+**Response:**
+```json
 [
   {
     "product_id": "PS-Xy1",
@@ -112,11 +139,13 @@ Response:
     ...
   }
 ]
+```
 
-✅ GET /product/:uid
+### ✅ GET `/product/:uid`
 Ambil detail produk dan rating.
 
-Response:
+**Response:**
+```json
 {
   "product": {
     "product_id": "PS-Xy1",
@@ -131,19 +160,25 @@ Response:
     }
   ]
 }
+```
 
-✅ POST /product/rating
+### ✅ POST `/product/rating`
 Tambahkan rating untuk produk.
 
-Body:
+**Request Body:**
+```json
 {
   "from_userId": "user-Abc1",
   "for_productId": "PS-Xy1",
   "rating": 4,
   "comment": "Mantap sekali"
 }
-Response:
+```
+
+**Response:**
+```json
 {
   "message": "Data berhasil disimpan",
   "id": 5
 }
+```
