@@ -25,6 +25,12 @@ app.use("/api/v1/auth", require("./routes/auth/auth"));
 */
 app.use("/api/v1/product", require("./routes/product/product"));
 
+/* 
+======================
+  TRANSACTION API ROUTES
+======================
+*/
+app.use("/api/v1/transaction", require("./routes/transaction/transaction"));
 
 
 app.listen(port, () => {
